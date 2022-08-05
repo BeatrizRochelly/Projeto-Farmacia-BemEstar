@@ -1,13 +1,13 @@
-package com.generation.farmaciabemestar;
+package org.generation.farmaciabemestar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FarmaciaBemEstarApplication {
+public class FarmaciabemestarApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FarmaciaBemEstarApplication.class, args);
+		SpringApplication.run(FarmaciabemestarApplication.class, args);
 	}
 
 }

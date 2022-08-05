@@ -1,10 +1,10 @@
-package com.generation.farmaciabemestar;
+package org.generation.farmaciabemestar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FarmaciaBemEstarApplicationTests {
+class FarmaciabemestarApplicationTests {
 
 	@Test
 	void contextLoads() {
