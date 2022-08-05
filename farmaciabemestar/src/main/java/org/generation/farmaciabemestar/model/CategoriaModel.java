@@ -9,7 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -22,7 +23,7 @@ public class CategoriaModel {
 	private Long id;
 	
 	
-	@NotNull(message = "O atributo categoria é obrigatório e não pode utilizar espaços em branco!") 
+	@NotBlank(message = "O atributo categoria é obrigatório e não pode utilizar espaços em branco!") 
 	private String nomeCategoria;
 
 	@OneToMany(mappedBy="categoria", cascade = CascadeType.ALL)

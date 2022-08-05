@@ -34,8 +34,8 @@ public class ProdutoModel {
 	private String descricao;
 	
 	@NotNull (message = "O atributo marca é Obrigatório!")
-	@Size(min = 3, max = 100, message = "O atributo texto deve conter no mínimo 3 e no máximo 100 caracteres")
-	private String texto;
+	@Size(min = 3, max = 100, message = "O atributo marca deve conter no mínimo 3 e no máximo 100 caracteres")
+	private String marca;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -73,12 +73,12 @@ public class ProdutoModel {
 		this.descricao = descricao;
 	}
 
-	public String getTexto() {
-		return texto;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 	public CategoriaModel getCategoria() {
@@ -89,7 +89,5 @@ public class ProdutoModel {
 		this.categoria = categoria;
 	}
 
-	
-	
 	
 }
