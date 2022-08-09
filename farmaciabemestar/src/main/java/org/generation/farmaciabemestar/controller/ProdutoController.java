@@ -3,6 +3,8 @@ package org.generation.farmaciabemestar.controller;
 import java.math.BigDecimal;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.generation.farmaciabemestar.model.ProdutoModel;
 import org.generation.farmaciabemestar.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,12 +49,12 @@ public class ProdutoController {
 	}
 	
 	@PostMapping    
-	public ResponseEntity<ProdutoModel> post (ProdutoModel produtos){
+	public ResponseEntity<ProdutoModel> post (@RequestBody @Valid ProdutoModel produtos){
 		return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produtos));
 	
 	}
 	@PutMapping
-	public ResponseEntity<ProdutoModel> put (@RequestBody ProdutoModel produtos){
+	public ResponseEntity<ProdutoModel> put (@RequestBody @Valid ProdutoModel produtos){
 		return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.save(produtos));
 	}
 	@DeleteMapping("/{id}")
